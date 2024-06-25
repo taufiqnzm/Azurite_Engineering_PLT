@@ -1,6 +1,12 @@
 <?php
     require_once 'includes/config.php';
     session_start();
+
+    // Fetching total count of rows
+    $countSql = "SELECT COUNT(*) AS total FROM tblProject";
+    $countResult = $conn->query($countSql);
+    $countRow = $countResult->fetch_assoc();
+    $_SESSION['project_count'] = serialize($countRow);
 ?>
 
 <!DOCTYPE html>
@@ -97,8 +103,8 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To AZURITE ENGINEERING PLT</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">GEOTECHNICAL</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">WE PROVIDE THE BEST GEO-SOLUTIONS</p>
-                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="quote.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -113,8 +119,8 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">WELCOME TO AZURITE ENGINEERING PLT</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">GEOPHYSICAL</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">WE PROVIDE THE BEST GEO-SOLUTIONS</p>
-                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="quote.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -129,8 +135,8 @@
                                 <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To AZURITE ENGINEERING PLT</h5>
                                 <h1 class="display-3 text-white animated slideInDown mb-4">GEOLOGICAL</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">WE PROVIDE THE BEST GEO-SOLUTIONS</p>
-                                <a href="about.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="quote.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -167,7 +173,7 @@
                                         <i class="fa fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">54</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $countRow["total"]; ?></h2>
                                         <p class="fw-medium mb-0">Happy Clients</p>
                                     </div>
                                 </div>
@@ -178,13 +184,13 @@
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">54</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $countRow["total"]; ?></h2>
                                         <p class="fw-medium mb-0">Projects Done</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="about.html" class="btn btn-primary py-3 px-5">Explore More</a>
+                        <a href="about.php" class="btn btn-primary py-3 px-5">Explore More</a>
                     </div>
                 </div>
             </div>

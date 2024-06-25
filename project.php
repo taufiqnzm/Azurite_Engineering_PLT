@@ -3,7 +3,7 @@
     session_start();
 
     // Pagination variables
-    $results_per_page = 10;
+    $resultsPerPage = 10;
 
     // Determine current page
     if (!isset($_GET['page'])) {
@@ -13,17 +13,15 @@
     }
 
     // Calculate the starting point for the results
-    $start_from = ($page - 1) * $results_per_page;
+    $startResult = ($page - 1) * $resultsPerPage;
 
-    // SQL query to count total number of rows
-    $count_sql = "SELECT COUNT(*) AS total FROM tblProject";
-    $count_result = $conn->query($count_sql);
-    $count_row = $count_result->fetch_assoc();
-    $total_pages = ceil($count_row["total"] / $results_per_page);
+    // Retrieve $countRow from session and unserialize it
+    $countRow = unserialize($_SESSION['project_count']);
+    $totalPages = ceil($countRow["total"] / $resultsPerPage);
 
-    $sql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ii", $start_from, $results_per_page);
+    $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
+    $stmt = $conn->prepare($projectCardSql);
+    $stmt->bind_param("ii", $startResult, $resultsPerPage);
     $stmt->execute();
     $result = $stmt->get_result();
 ?>
@@ -168,8 +166,8 @@
             <div class="row">
                 <?php
                 if ($result->num_rows > 0) {
-                    $start_index = ($page - 1) * $results_per_page + 1;
-                    $end_index = min($start_index + $results_per_page - 1, $count_row["total"]);
+                    $startProjectDisplayed = ($page - 1) * $resultsPerPage + 1;
+                    $endProjectDisplayed = min($startProjectDisplayed + $resultsPerPage - 1, $countRow["total"]);
                     // Output data for each row
                     while($row = $result->fetch_assoc()) {
                         echo '
@@ -192,6 +190,7 @@
                 <div class="col-12">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
+                            <!-- Previous Button -->
                             <?php if ($page > 1): ?>
                                 <li class="page-item">
                                     <a class="page-link" href="?page=<?php echo ($page - 1); ?>" aria-label="Previous">
@@ -201,13 +200,15 @@
                                 </li>
                             <?php endif; ?>
 
-                            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                            <!-- Page Number Link -->
+                            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
                                 <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>">
                                     <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
                                 </li>
                             <?php endfor; ?>
 
-                            <?php if ($page < $total_pages): ?>
+                            <!-- Next Button -->
+                            <?php if ($page < $totalPages): ?>
                                 <li class="page-item">
                                     <a class="page-link" href="?page=<?php echo ($page + 1); ?>" aria-label="Next">
                                         <span aria-hidden="true">&raquo;</span>
@@ -219,10 +220,11 @@
                     </nav>
                 </div>
             </div>
+            
             <!-- Pagination Info -->
             <div class="row">
                 <div class="col-12">
-                    <p class="pagination-info mb-3">Showing <?php echo $start_index; ?> - <?php echo $end_index; ?> of <?php echo $count_row["total"]; ?></p>
+                    <p class="pagination-info mb-3">Showing <?php echo $startProjectDisplayed; ?> - <?php echo $endProjectDisplayed; ?> of <?php echo $countRow["total"]; ?></p>
                 </div>
             </div>
         </div>
