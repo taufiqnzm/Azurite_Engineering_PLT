@@ -15,6 +15,12 @@
     // Calculate the starting point for the results
     $start_from = ($page - 1) * $results_per_page;
 
+    // SQL query to count total number of rows
+    $count_sql = "SELECT COUNT(*) AS total FROM tblProject";
+    $count_result = $conn->query($count_sql);
+    $count_row = $count_result->fetch_assoc();
+    $total_pages = ceil($count_row["total"] / $results_per_page);
+
     $sql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ii", $start_from, $results_per_page);
@@ -78,6 +84,12 @@
 
         .custom-card {
             background-color: #ab7442; /* Change background color */
+        }
+
+        .pagination-info {
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
         }
     </style>
 </head>
@@ -156,6 +168,8 @@
             <div class="row">
                 <?php
                 if ($result->num_rows > 0) {
+                    $start_index = ($page - 1) * $results_per_page + 1;
+                    $end_index = min($start_index + $results_per_page - 1, $count_row["total"]);
                     // Output data for each row
                     while($row = $result->fetch_assoc()) {
                         echo '
@@ -178,20 +192,37 @@
                 <div class="col-12">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
-                            <?php
-                            // SQL query to count total number of rows
-                            $count_sql = "SELECT COUNT(*) AS total FROM tblProject";
-                            $count_result = $conn->query($count_sql);
-                            $count_row = $count_result->fetch_assoc();
-                            $total_pages = ceil($count_row["total"] / $results_per_page);
+                            <?php if ($page > 1): ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=<?php echo ($page - 1); ?>" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
 
-                            // Create pagination links
-                            for ($i = 1; $i <= $total_pages; $i++) {
-                                echo '<li class="page-item ' . ($page == $i ? 'active' : '') . '"><a class="page-link" href="?page=' . $i . '">' . $i . '</a></li>';
-                            }
-                            ?>
+                            <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+                                <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>">
+                                    <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                                </li>
+                            <?php endfor; ?>
+
+                            <?php if ($page < $total_pages): ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=<?php echo ($page + 1); ?>" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="visually-hidden">Next</span>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     </nav>
+                </div>
+            </div>
+            <!-- Pagination Info -->
+            <div class="row">
+                <div class="col-12">
+                    <p class="pagination-info mb-3">Showing <?php echo $start_index; ?> - <?php echo $end_index; ?> of <?php echo $count_row["total"]; ?></p>
                 </div>
             </div>
         </div>
