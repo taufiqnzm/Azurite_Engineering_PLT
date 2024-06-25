@@ -1,6 +1,25 @@
 <?php
     require_once("includes/config.php");
     session_start();
+
+    // Pagination variables
+    $results_per_page = 10;
+
+    // Determine current page
+    if (!isset($_GET['page'])) {
+        $page = 1;
+    } else {
+        $page = $_GET['page'];
+    }
+
+    // Calculate the starting point for the results
+    $start_from = ($page - 1) * $results_per_page;
+
+    $sql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ii", $start_from, $results_per_page);
+    $stmt->execute();
+    $result = $stmt->get_result();
 ?>
 
 
@@ -131,17 +150,45 @@
                 <h1 class="display-5 mb-5">Our Projects</h1>
             </div>
             <div class="row">
-                <!-- Example Project Card -->
-                <div class="col-12 mb-4">
-                    <div class="card border-0 shadow">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Project Name 1</h5>
-                            <p class="card-text">Year: 2022</p>
-                        </div>
-                    </div>
+                <?php
+                if ($result->num_rows > 0) {
+                    // Output data for each row
+                    while($row = $result->fetch_assoc()) {
+                        echo '
+                        <div class="col-12 mb-4">
+                            <div class="card border-0 shadow">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">' . htmlspecialchars($row["projectName"]) . '</h5>
+                                    <p class="card-text">Year: ' . htmlspecialchars($row["projectYear"]) . '</p>
+                                </div>
+                            </div>
+                        </div>';
+                    }
+                } else {
+                    echo "No projects found.";
+                }
+                ?>
+            </div>
+            <!-- Pagination links -->
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <?php
+                            // SQL query to count total number of rows
+                            $count_sql = "SELECT COUNT(*) AS total FROM tblProject";
+                            $count_result = $conn->query($count_sql);
+                            $count_row = $count_result->fetch_assoc();
+                            $total_pages = ceil($count_row["total"] / $results_per_page);
+
+                            // Create pagination links
+                            for ($i = 1; $i <= $total_pages; $i++) {
+                                echo '<li class="page-item ' . ($page == $i ? 'active' : '') . '"><a class="page-link" href="?page=' . $i . '">' . $i . '</a></li>';
+                            }
+                            ?>
+                        </ul>
+                    </nav>
                 </div>
-                <!-- Repeat for each project -->
-                <!-- You can use a loop in a backend language to generate these dynamically -->
             </div>
         </div>
     </div>

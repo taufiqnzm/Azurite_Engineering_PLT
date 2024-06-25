@@ -312,7 +312,7 @@
 
 
     <!-- Projects Start -->
-    <div class="container-fluid py-5 bg-light">
+    <!-- <div class="container-fluid py-5 bg-light">
         <div class="container">
             <div class="section-title text-center">
                 <h1 class="display-5 mb-5">Our Projects</h1>
@@ -419,7 +419,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Projects End -->
 
 
