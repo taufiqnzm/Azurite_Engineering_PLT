@@ -68,6 +68,37 @@
         .gallery-item:hover .gallery-overlay .btn {
             display: inline-block;
         }        
+
+        /* Media queries for different screen sizes */
+        @media (max-width: 1200px) {
+            .gallery-item {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .gallery-item {
+                height: 180px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-item {
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .gallery-item {
+                height: 120px;
+            }
+        }
     </style>
 </head>
 
