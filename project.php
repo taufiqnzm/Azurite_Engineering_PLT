@@ -190,6 +190,16 @@
                 <div class="col-12">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
+                            <!-- First Button -->
+                            <?php if ($page > 1): ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=1" aria-label="First">
+                                        <span aria-hidden="true">&laquo;&laquo;</span>
+                                        <span class="visually-hidden">First</span>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                            
                             <!-- Previous Button -->
                             <?php if ($page > 1): ?>
                                 <li class="page-item">
@@ -216,11 +226,21 @@
                                     </a>
                                 </li>
                             <?php endif; ?>
+
+                            <!-- Last Button -->
+                            <?php if ($page < $totalPages): ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="?page=<?php echo $totalPages; ?>" aria-label="Last">
+                                        <span aria-hidden="true">&raquo;&raquo;</span>
+                                        <span class="visually-hidden">Last</span>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     </nav>
                 </div>
             </div>
-            
+
             <!-- Pagination Info -->
             <div class="row">
                 <div class="col-12">
