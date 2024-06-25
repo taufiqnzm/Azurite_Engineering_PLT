@@ -213,7 +213,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Geotechnical</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <!-- <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p> -->
                             <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Geophysical</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <!-- <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p> -->
                             <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
@@ -237,7 +237,7 @@
                         </div>
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Geological</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
+                            <!-- <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p> -->
                             <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>

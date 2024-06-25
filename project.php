@@ -61,35 +61,75 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .card {
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .card-title {
-            font-size: 1.25rem; /* Increase font size */
-            color: #ffffff; /* White color */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for contrast */
-        }
-        
-        .card-text {
-            font-size: 1rem;
-            color: #ffffff;
-        }        
+    .card {
+        transition: transform 0.3s ease, opacity 0.5s ease;
+        opacity: 0; /* Start with opacity 0 to fade in */
+    }
 
-        .custom-card {
-            background-color: #ab7442; /* Change background color */
-        }
+    /* Alternate animation direction based on card index */
+    .fadeInRight {
+        animation: fadeInRightAnimation 2s forwards;
+    }
 
-        .pagination-info {
-            text-align: center;
-            font-size: 1rem;
-            color: #666;
+    .fadeInLeft {
+        animation: fadeInLeftAnimation 2s forwards;
+    }
+
+    @keyframes fadeInRightAnimation {
+        0% {
+            opacity: 0;
+            transform: translateX(200px); /* Move from right */
         }
-    </style>
+        100% {
+            opacity: 1;
+            transform: translateX(0); /* Fade in to original position */
+        }
+    }
+
+    @keyframes fadeInLeftAnimation {
+        0% {
+            opacity: 0;
+            transform: translateX(-200px); /* Move from left */
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0); /* Fade in to original position */
+        }
+    }
+
+    .card-title {
+        font-size: 1.25rem; /* Increase font size */
+        color: #ffffff; /* White color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for contrast */
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #ffffff;
+    }
+
+    .custom-card {
+        background-color: #ab7442; /* Change background color */
+    }
+
+    .custom-card:hover {
+        background-color: #ea282a; /* Change to white on hover */
+        color: #ab7442; /* Change text color to match original background */
+    }
+
+    .pagination-info {
+        text-align: center;
+        font-size: 1rem;
+        color: #666;
+    }
+
+
+</style>
+
+
+
+
+
 </head>
 
 <body>
@@ -168,17 +208,20 @@
                 if ($result->num_rows > 0) {
                     $startProjectDisplayed = ($page - 1) * $resultsPerPage + 1;
                     $endProjectDisplayed = min($startProjectDisplayed + $resultsPerPage - 1, $countRow["total"]);
+                    $cardIndex = 1;
                     // Output data for each row
                     while($row = $result->fetch_assoc()) {
+                        $cardAnimationClass = ($cardIndex % 2 == 0) ? 'fadeInRight' : 'fadeInLeft'; // Alternate animation class
                         echo '
                         <div class="col-12 mb-4">
-                            <div class="card border-0 shadow custom-card">  
+                            <div class="card border-0 shadow custom-card ' . $cardAnimationClass . '">  
                                 <div class="card-body text-center">
                                     <p class="card-title">' . htmlspecialchars($row["projectName"]) . '</p>
                                     <p class="card-text">Year: ' . htmlspecialchars($row["projectYear"]) . '</p>
                                 </div>
                             </div>
                         </div>';
+                        $cardIndex++;
                     }
                 } else {
                     echo "No projects found.";

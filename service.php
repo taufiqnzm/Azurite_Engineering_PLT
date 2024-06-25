@@ -103,7 +103,7 @@
 
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    
         <div class="container">
             <div class="section-title text-center">
                 <h1 class="display-5 mb-5">Our Services</h1>
@@ -147,7 +147,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Service End -->
 
 

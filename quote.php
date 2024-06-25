@@ -116,7 +116,7 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Free Quote</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">Get a free quote for our top-notch services. We are here to understand your needs and provide the best solutions tailored just for you.</p>
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
@@ -131,9 +131,9 @@
                                 <div class="col-12 col-sm-6">
                                     <select class="form-select border-0" style="height: 55px;">
                                         <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                        <option value="Geotechnical">Geotechnical</option>
+                                        <option value="Geophysical">Geophysical</option>
+                                        <option value="Geological">Geological</option>
                                     </select>
                                 </div>
                                 <div class="col-12">

@@ -1,6 +1,9 @@
 <?php
     require_once("includes/config.php");
     session_start();
+
+    // Retrieve $countRow from session and unserialize it
+    $countRow = unserialize($_SESSION['project_count']);
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +38,24 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .mission-card,
+        .vision-card {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .mission-card:hover,
+        .vision-card:hover {
+            background-color: #ab7442; /* Inverted background color */
+            color: #ffffff; /* Inverted text color */
+        }
+
+        .mission-card:hover .card-title ,
+        .vision-card:hover .card-title {
+            color: #ffffff !important; /* Inverted text color for card-title */
+        }
+    </style>
 </head>
 
 <body>
@@ -106,7 +127,7 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container-fluid bg-light overflow-hidden mt-5 px-lg-0">
         <div class="container about px-lg-0">
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
@@ -127,7 +148,7 @@
                                         <i class="fa fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">54</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $countRow["total"]; ?></h2>
                                         <p class="fw-medium mb-0">Happy Clients</p>
                                     </div>
                                 </div>
@@ -138,7 +159,7 @@
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up">54</h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $countRow["total"]; ?></h2>
                                         <p class="fw-medium mb-0">Projects Done</p>
                                     </div>
                                 </div>
@@ -151,85 +172,36 @@
         </div>
     </div>
     <!-- About End -->
-
-
-    <!-- Team Start -->
+    
+    <!-- Mission & Vision Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Team Members</h1>
+                <h1 class="display-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">Vision & Mission</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="card shadow-lg border-0 rounded-lg p-5 mission-card">
+                        <h2 class="card-title text-primary mb-4">Our Vision</h2>
+                        <p class="card-text">
+                            To be the leading company in providing Geo-Services inMalaysia
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="card shadow-lg border-0 rounded-lg p-5 vision-card">
+                        <h2 class="card-title text-primary mb-4">Our Mission</h2>
+                        <p class="card-text">
+                            To be the expert and reliable company for industrial needs specialising in Geotechnical, Geophysical and Geological
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Team End -->
-        
+    <!-- Mission & Vision End -->
 
+    
     <!-- Footer Start -->
     <?php include 'includes/footer.php'; ?>
 

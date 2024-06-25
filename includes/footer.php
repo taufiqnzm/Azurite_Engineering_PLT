@@ -15,15 +15,15 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Geotechnical</a>
-                    <a class="btn btn-link" href="">Geophysical</a>
-                    <a class="btn btn-link" href="">Geological</a>
+                    <a class="btn btn-link" href="service.php">Geotechnical</a>
+                    <a class="btn btn-link" href="service.php">Geophysical</a>
+                    <a class="btn btn-link" href="service.php">Geological</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Quick Links</h4>
                     <a class="btn btn-link" href="about.php">About Us</a>
                     <a class="btn btn-link" href="contact.php">Contact Us</a>
-                    <a class="btn btn-link" href="services.php">Our Services</a>
+                    <a class="btn btn-link" href="service.php">Our Services</a>
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
