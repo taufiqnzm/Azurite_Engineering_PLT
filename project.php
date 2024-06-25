@@ -66,15 +66,19 @@
         }
         
         .card-title {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: #333;
+            font-size: 1.25rem; /* Increase font size */
+            color: #ffffff; /* White color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for contrast */
         }
         
         .card-text {
             font-size: 1rem;
-            color: #666;
+            color: #ffffff;
         }        
+
+        .custom-card {
+            background-color: #ab7442; /* Change background color */
+        }
     </style>
 </head>
 
@@ -156,9 +160,9 @@
                     while($row = $result->fetch_assoc()) {
                         echo '
                         <div class="col-12 mb-4">
-                            <div class="card border-0 shadow">
+                            <div class="card border-0 shadow custom-card">  
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">' . htmlspecialchars($row["projectName"]) . '</h5>
+                                    <p class="card-title">' . htmlspecialchars($row["projectName"]) . '</p>
                                     <p class="card-text">Year: ' . htmlspecialchars($row["projectYear"]) . '</p>
                                 </div>
                             </div>
