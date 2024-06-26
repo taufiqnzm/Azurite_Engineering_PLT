@@ -15,9 +15,14 @@
     // Calculate the starting point for the results
     $startResult = ($page - 1) * $resultsPerPage;
 
-    // Retrieve $countRow from session and unserialize it
-    $countRow = unserialize($_SESSION['project_count']);
-    $totalPages = ceil($countRow["total"] / $resultsPerPage);
+    // Retrieve $totalProjects from session with error handling
+    if (isset($_SESSION['project_count'])) {
+        $totalProjects = ($_SESSION['project_count']);        
+    } else {
+        // Default value if 'project_count' is not available
+        $totalProjects = 54;
+    }
+    $totalPages = ceil($totalProjects / $resultsPerPage);
 
     $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
     $stmt = $conn->prepare($projectCardSql);
@@ -61,74 +66,68 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-    .card {
-        transition: transform 0.3s ease, opacity 0.5s ease;
-        opacity: 0; /* Start with opacity 0 to fade in */
-    }
-
-    /* Alternate animation direction based on card index */
-    .fadeInRight {
-        animation: fadeInRightAnimation 2s forwards;
-    }
-
-    .fadeInLeft {
-        animation: fadeInLeftAnimation 2s forwards;
-    }
-
-    @keyframes fadeInRightAnimation {
-        0% {
-            opacity: 0;
-            transform: translateX(200px); /* Move from right */
+        .card {
+            transition: transform 0.3s ease, opacity 0.5s ease;
+            opacity: 0; /* Start with opacity 0 to fade in */
         }
-        100% {
-            opacity: 1;
-            transform: translateX(0); /* Fade in to original position */
+
+        /* Alternate animation direction based on card index */
+        .fadeInRight {
+            animation: fadeInRightAnimation 2s forwards;
         }
-    }
 
-    @keyframes fadeInLeftAnimation {
-        0% {
-            opacity: 0;
-            transform: translateX(-200px); /* Move from left */
+        .fadeInLeft {
+            animation: fadeInLeftAnimation 2s forwards;
         }
-        100% {
-            opacity: 1;
-            transform: translateX(0); /* Fade in to original position */
+
+        @keyframes fadeInRightAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(200px); /* Move from right */
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0); /* Fade in to original position */
+            }
         }
-    }
 
-    .card-title {
-        font-size: 1.25rem; /* Increase font size */
-        color: #ffffff; /* White color */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for contrast */
-    }
+        @keyframes fadeInLeftAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(-200px); /* Move from left */
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0); /* Fade in to original position */
+            }
+        }
 
-    .card-text {
-        font-size: 1rem;
-        color: #ffffff;
-    }
+        .card-title {
+            font-size: 1.25rem; /* Increase font size */
+            color: #ffffff; /* White color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for contrast */
+        }
 
-    .custom-card {
-        background-color: #ab7442; /* Change background color */
-    }
+        .card-text {
+            font-size: 1rem;
+            color: #ffffff;
+        }
 
-    .custom-card:hover {
-        background-color: #ea282a; /* Change to white on hover */
-        color: #ab7442; /* Change text color to match original background */
-    }
+        .custom-card {
+            background-color: #ab7442; /* Change background color */
+        }
 
-    .pagination-info {
-        text-align: center;
-        font-size: 1rem;
-        color: #666;
-    }
+        .custom-card:hover {
+            background-color: #ea282a; /* Change to white on hover */
+            color: #ab7442; /* Change text color to match original background */
+        }
 
-
-</style>
-
-
-
-
+        .pagination-info {
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
 
 </head>
 
@@ -207,7 +206,7 @@
                 <?php
                 if ($result->num_rows > 0) {
                     $startProjectDisplayed = ($page - 1) * $resultsPerPage + 1;
-                    $endProjectDisplayed = min($startProjectDisplayed + $resultsPerPage - 1, $countRow["total"]);
+                    $endProjectDisplayed = min($startProjectDisplayed + $resultsPerPage - 1, $totalProjects);
                     $cardIndex = 1;
                     // Output data for each row
                     while($row = $result->fetch_assoc()) {
@@ -287,7 +286,7 @@
             <!-- Pagination Info -->
             <div class="row">
                 <div class="col-12">
-                    <p class="pagination-info mb-3">Showing <?php echo $startProjectDisplayed; ?> - <?php echo $endProjectDisplayed; ?> of <?php echo $countRow["total"]; ?></p>
+                    <p class="pagination-info mb-3">Showing <?php echo $startProjectDisplayed; ?> - <?php echo $endProjectDisplayed; ?> of <?php echo $totalProjects; ?></p>
                 </div>
             </div>
         </div>

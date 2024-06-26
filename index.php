@@ -6,7 +6,8 @@
     $countSql = "SELECT COUNT(*) AS total FROM tblProject";
     $countResult = $conn->query($countSql);
     $countRow = $countResult->fetch_assoc();
-    $_SESSION['project_count'] = serialize($countRow);
+    $totalProjects = $countRow["total"];
+    $_SESSION['project_count'] = $totalProjects;
 ?>
 
 <!DOCTYPE html>
@@ -173,7 +174,7 @@
                                         <i class="fa fa-users fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $countRow["total"]; ?></h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $totalProjects; ?></h2>
                                         <p class="fw-medium mb-0">Happy Clients</p>
                                     </div>
                                 </div>
@@ -184,7 +185,7 @@
                                         <i class="fa fa-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-3">
-                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $countRow["total"]; ?></h2>
+                                        <h2 class="text-primary mb-1" data-toggle="counter-up"><?php echo $totalProjects; ?></h2>
                                         <p class="fw-medium mb-0">Projects Done</p>
                                     </div>
                                 </div>
