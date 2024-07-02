@@ -42,6 +42,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -208,38 +209,38 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
+                    <div class="service-item text-center border border-5 border-light border">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+                            <i class="fa fa-hard-hat fa-4x text-primary my-3"></i>
                         </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center ">
                             <h4 class="mb-3">Geotechnical</h4>
                             <!-- <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p> -->
-                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
+                    <div class="service-item text-center border border-5 border-light border">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                            <i class="fa fa-globe fa-4x text-primary my-3"></i>
                         </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center">
                             <h4 class="mb-3">Geophysical</h4>
                             <!-- <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p> -->
-                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
+                    <div class="service-item text-center border border-5 border-light border">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                            <i class="fa fa-mountain fa-4x text-primary my-3"></i>
                         </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center">
                             <h4 class="mb-3">Geological</h4>
                             <!-- <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p> -->
-                            <a class="fw-medium" href="service.html">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="service.php">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -247,314 +248,6 @@
         </div>
     </div>
     <!-- Service End -->
-
-
-    <!-- Feature Start -->
-    <!-- <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container feature px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 ps-lg-0">
-                        <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Why Choose Us</h1>
-                        </div>
-                        <p class="mb-4 pb-2">We pride ourselves on providing exceptional service and innovative solutions tailored to meet your unique needs. Our team is dedicated to delivering quality results, from concept to completion, ensuring your complete satisfaction.</p>
-                        <div class="row g-4">
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-user-check fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Quality</p>
-                                        <h5 class="mb-0">Services</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-sharp fa-solid fa-star fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Top</p>
-                                        <h5 class="mb-0">Rated</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fas fa-dollar-sign fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Low</p>
-                                        <h5 class="mb-0">Cost</h5>
-                                    </div>
-                                </div>
-                            </div>                                                        
-                            <div class="col-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-headphones fa-2x text-primary"></i>
-                                    </div>
-                                    <div class="ms-4">
-                                        <p class="mb-2">Consultation</p>
-                                        <h5 class="mb-0">Support</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Feature End -->
-
-
-    <!-- Projects Start -->
-    <!-- <div class="container-fluid py-5 bg-light">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Our Projects</h1>
-            </div>
-            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-12 text-center">
-                    <ul class="list-inline mb-5" id="portfolio-flters">
-                        <li class="mx-2 active" data-filter="*">All</li>
-                        <li class="mx-2" data-filter=".first">General Carpentry</li>
-                        <li class="mx-2" data-filter=".second">Custom Carpentry</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">General Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Custom Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">General Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Custom Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">General Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="rounded overflow-hidden">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                            </div>
-                        </div>
-                        <div class="border border-5 border-light border-top-0 p-4">
-                            <p class="text-primary fw-medium mb-2">Custom Carpentry</p>
-                            <h5 class="lh-base mb-0">Wooden Furniture Manufacturing And Remodeling</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Projects End -->
-
-
-    <!-- Quote Start -->
-    <!-- <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container quote px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote.jpg" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                        <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Free Quote</h1>
-                        </div>
-                        <p class="mb-4 pb-2">Get a free quote for our top-notch services. We are here to understand your needs and provide the best solutions tailored just for you.</p>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Quote End -->
-
-
-    <!-- Team Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Team Members</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="overflow-hidden position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Full Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Team End -->
 
 
     <!-- Testimonial Start -->

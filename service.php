@@ -103,51 +103,310 @@
 
 
     <!-- Service Start -->
-    
+    <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
                 <h1 class="display-5 mb-5">Our Services</h1>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
+            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-5" id="portfolio-flters">
+                        <li class="mx-2 active" data-filter="*">All</li>
+                        <li class="mx-2" data-filter=".first">Geotechnical</li>
+                        <li class="mx-2" data-filter=".second">Geophysical</li>
+                        <li class="mx-2" data-filter=".third">Geological</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Geotechnical</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Soil Investigation</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/seismic/11.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/seismic/11.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Geophysical</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geophysical</p>
+                            <h5 class="lh-base mb-0">Seismic Survey</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
+                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/geological/1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/geological/1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
                         </div>
-                        <div class="p-4 text-center border border-5 border-light border-top-0">
-                            <h4 class="mb-3">Geological</h4>
-                            <p>Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.</p>
-                            <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geological</p>
+                            <h5 class="lh-base mb-0">Geological Mapping</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/standpipe/1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/standpipe/1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geophysical</p>
+                            <h5 class="lh-base mb-0">Electrical Resisitvity Tomography (ERT) Survey</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/geological/6.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/geological/6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geological</p>
+                            <h5 class="lh-base mb-0">Geological Terrainmapping</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/mackintosh/3.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/mackintosh/3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Mackintosh Probetest</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/seismic/gpr.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/seismic/gpr.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geophysical</p>
+                            <h5 class="lh-base mb-0">Ground Penetrating Radar (GPR)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="" alt="Rock Slope & Rock Fallmapping">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geological</p>
+                            <h5 class="lh-base mb-0">Rock Slope & Rock Fallmapping</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/handAuger.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/handAuger.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Hand Auger</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="" alt="Transient Electromagnetic">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geophysical</p>
+                            <h5 class="lh-base mb-0">Transient Electromagnetic</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/groundwaterLevel/11.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/groundwaterLevel/11.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Groundwater Drilling & Exploration</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="" alt="Field Density Test">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Field Density Test</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item third wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/groundwaterSampling/1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/groundwaterSampling/1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Groundwater Sampling</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="" alt="Piezocone">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Piezocone</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/vaneShear/3.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/vaneShear/3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Vane Shear Test</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/trialPit/2.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/trialPit/2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Trial Pit</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/standpipe/standpipe & pneumatic piezometer.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/standpipe/standpipe & pneumatic piezometer.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Standpipe & Pneumatic Piezometer</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="" alt="IN-SITU CBR Test">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">IN-SITU CBR Test</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="rounded overflow-hidden">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid w-100" src="img/services/inclinometer.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-square btn-outline-light mx-1" href="img/services/inclinometer.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="border border-5 border-light border-top-0 p-4">
+                            <p class="text-primary fw-medium mb-2">Geotechnical</p>
+                            <h5 class="lh-base mb-0">Inclinometer</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <!-- Service End -->
 
 

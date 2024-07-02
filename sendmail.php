@@ -15,6 +15,7 @@
         $senderEmail = $_POST['email'];
         $subject = $_POST['subject'];
         $message = $_POST['message'];
+        $companyLogo = 'img\azurite-logo.png';
 
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -41,18 +42,38 @@
             // $mail->addBCC('bcc@example.com');
 
             //Attachments
-            // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+            $mail->addAttachment($companyLogo, 'azurite-logo.png');         //Add attachments
             // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+            // For img in the email body. put above header 
+            // <img src="'.$companyLogo.'" alt="Azurite Engineering Logo" style="max-width: 150px; display: block; margin: 0 auto 20px;">
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'New enquiry - Azurite Engineering PLT Contact Form';
-            $mail->Body    = '<h3>Hello, you got a new enquiry</h3>
-                <h4>Fullname: '.$name.'</h4>
-                <h4>Email: '.$senderEmail.'</h4>
-                <h4>Subject: '.$subject.'</h4>
-                <h4>Message: '.$message.'</h4>
+            $mail->Body    = '
+                <div style="max-width: 600px; margin: auto; font-family: Arial, sans-serif;">
+                    <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px;">
+                        <img src="cid:azurite-logo" alt="Azurite Engineering Logo" style="max-width: 150px; display: block; margin: 0 auto 20px; width: 75px;">
+                        <h2 style="color: #333333;">New Enquiry Received</h2>
+                        <p style="font-size: 16px;">Dear Team,</p>
+                        <p style="font-size: 16px;">You have received a new enquiry:</p>
+                        <hr style="border-top: 1px solid #ccc;">
+                        <h3 style="color: #007bff;">Details:</h3>
+                        <ul>
+                            <li><strong>Name:</strong> '.$name.'</li>
+                            <li><strong>Email:</strong> <a href="mailto:'.$senderEmail.'" style="color: #007bff;">'.$senderEmail.'</a></li>
+                            <li><strong>Subject:</strong> '.$subject.'</li>
+                        </ul>
+                        <h3 style="color: #007bff;">Message:</h3>
+                        <p style="font-size: 16px;">'.$message.'</p>
+                        <hr style="border-top: 1px solid #ccc;">
+                        <p style="font-size: 14px; color: #777777;">This message was sent via the Azurite Engineering PLT Contact Form.</p>
+                    </div>
+                </div>
             ';
+
+            $mail->addEmbeddedImage($companyLogo, 'azurite-logo');
                 
             // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
