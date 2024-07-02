@@ -19,66 +19,67 @@
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
-        }        
+        }
         .container-xxl {
             padding-left: 50px;
             padding-right: 50px;
         }
     </style>
 
-  </head>
-  <body class="bg-dark py-5">
+</head>
+<body class="bg-dark py-5">
     <div class="container-xxl px-2 mt-5">
         <div class="heading py-4 border-bottom border-light">
             <h1 class="text-white text-center">Gallery</h1>
             <h5 class="text-light py-2 text-center">Projects Pictures</h5>
-
         </div>
 
-        <div class="row py-2">
-            <div class="column">
-                <img src="img/gallery/img-1.jpg" alt="" srcset="">
-                <img src="img/gallery/img-2.jpg" alt="" srcset="">
-                <img src="img/gallery/img-3.jpg" alt="" srcset="">
-                <img src="img/gallery/img-4.jpg" alt="" srcset="">
-                <img src="img/gallery/img-5.jpg" alt="" srcset="">
-                <img src="img/gallery/img-6.jpg" alt="" srcset="">
-                
-            </div>
-            <div class="column">
-                <img src="img/gallery/img-7.jpg" alt="" srcset="">
-                <img src="img/gallery/img-8.jpg" alt="" srcset="">
-                <img src="img/services/haha.jpg" alt="" srcset="">
-                <img src="img/services/handAuger.jpg" alt="" srcset="">
-                <img src="img/services/idk.jpg" alt="" srcset="">
-                <img src="img/services/idk2.jpg" alt="" srcset="">
-                
-                
-            </div>
-            <div class="column">
-                <img src="img/services/inclinometer.jpg" alt="" srcset="">
-                <img src="img/services/settlement monitoring.jpg" alt="" srcset="">
-                <img src="img/services/some student.jpg" alt="" srcset="">
-                <img src="img/services/tah batang apa.jpg" alt="" srcset="">
-                <img src="img/services/tktau.jpg" alt="" srcset="">
-                <img src="img/services/geological/1.jpg" alt="" srcset="">
-                
-            </div>
-            <div class="column">
-                <img src="img/services/geological/2.jpg" alt="" srcset="">
-                <img src="img/services/geological/3.jpg" alt="" srcset="">
-                <img src="img/services/geological/4.jpg" alt="" srcset="">
-                <img src="img/services/geological/5.jpg" alt="" srcset="">
-                <img src="img/services/geological/6.jpg" alt="" srcset="">
-                <img src="img/services/geological/7.jpg" alt="" srcset="">                
-            </div>
+        <div class="row py-2" id="gallery">
+            <!-- JavaScript will inject the columns here -->
         </div>
     </div>
 
+    <script>
+        const basePath = 'img/gallery/';
+        const baseName = 'img-';
+        const fileExtension = '.jpg';
+        const imageCount = 94; // Number of images in the gallery directory
+        const images = [];
+
+        // Generate image paths based on the pattern
+        for (let i = 1; i <= imageCount; i++) {
+            images.push(`${basePath}${baseName}${i}${fileExtension}`);
+        }
+
+        // Additional images from another directory
+        const additionalImages = [
+            'img/services/service-vaneshear.jpg', 'img/services/service-terrain.jpg', 'img/services/service-seismic.jpg',
+            'img/services/service-pit.jpg', 'img/services/service-piezometer.jpg', 'img/services/service-mackintosh.jpg',
+            'img/services/service-inclonometer.jpg', 'img/services/service-g-sampling.jpg', 'img/services/service-geo-mapping.jpg',
+            'img/services/service-ert.jpg', 'img/services/service-drill.jpg', 'img/services/service-auger.jpg',
+        ];
+
+        images.push(...additionalImages);
+
+        const gallery = document.getElementById('gallery');
+
+        // Create columns based on image array
+        const columns = [[], [], [], []];
+        images.forEach((src, index) => {
+            columns[index % 4].push(`<img src="${src}" alt="" srcset="">`);
+        });
+
+        // Insert columns into gallery
+        columns.forEach(column => {
+            const div = document.createElement('div');
+            div.className = 'column';
+            div.innerHTML = column.join('');
+            gallery.appendChild(div);
+        });
+    </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-
-  </body>
+</body>
 </html>
