@@ -106,7 +106,7 @@
                                 <h1 class="display-3 text-white animated slideInDown mb-4">GEOTECHNICAL</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">WE PROVIDE THE BEST GEO-SOLUTIONS</p>
                                 <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="quote.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <a href="quote.php" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                                 <h1 class="display-3 text-white animated slideInDown mb-4">GEOPHYSICAL</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">WE PROVIDE THE BEST GEO-SOLUTIONS</p>
                                 <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="quote.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <a href="quote.php" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                                 <h1 class="display-3 text-white animated slideInDown mb-4">GEOLOGICAL</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">WE PROVIDE THE BEST GEO-SOLUTIONS</p>
                                 <a href="about.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
-                                <a href="quote.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Free Quote</a>
+                                <a href="quote.php" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                             </div>
                         </div>
                     </div>

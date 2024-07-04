@@ -1,8 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #ea282a;
+    --primary: #2d2e6e;
+    --secondary: #ea282a;
     --light: #F5F5F5;
-    --dark: #353535;
+    --dark: #2d2e6e;
 }
 
 .fw-medium {
@@ -99,7 +100,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 @media (max-width: 991.98px) {
@@ -201,8 +202,8 @@
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
 }
 
 .header-carousel .owl-dots {
@@ -239,8 +240,8 @@
 }
 
 .header-carousel .owl-dot.active {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: var(--secondary);
+    border-color: var(--secondary);
 }
 
 .page-header {
@@ -357,8 +358,8 @@
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
-    color: var(--primary);
-    border-color: var(--primary);
+    color: var(--secondary);
+    border-color: var(--secondary);
 }
 
 .portfolio-item img {
@@ -532,7 +533,7 @@
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
-    color: var(--dark);
+    color: var(--secondary);
 }
 
 
@@ -579,7 +580,7 @@
 }
 
 .footer .btn.btn-social:hover {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .footer .btn.btn-link {
@@ -603,7 +604,7 @@
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: var(--secondary);
     letter-spacing: 1px;
     box-shadow: none;
 }
@@ -619,5 +620,5 @@
 }
 
 .footer .copyright a:hover {
-    color: var(--primary);
+    color: var(--secondary);
 }
