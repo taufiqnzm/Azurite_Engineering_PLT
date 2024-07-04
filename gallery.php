@@ -33,71 +33,27 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .gallery-item {
-            position: relative;
-            height: 250px; /* Adjust the height as needed */
+        .gallery-section .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         }
-        
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+        .gallery-section .column {
+            grid-column: span 3 ;
+            width: auto;
+            overflow: hidden;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            flex-direction: column;
+            gap: 1.2rem;
         }
-        
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        
-        .gallery-overlay .btn {
-            display: none;
-        }
-        
-        .gallery-item:hover .gallery-overlay .btn {
-            display: inline-block;
-        }        
-
-        /* Media queries for different screen sizes */
-        @media (max-width: 1200px) {
-            .gallery-item {
-                height: 200px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .gallery-item {
-                height: 180px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .gallery-item {
-                height: 160px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .gallery-item {
-                height: 140px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .gallery-item {
-                height: 120px;
-            }
+        .container-xxl {
+            padding-left: 50px;
+            padding-right: 50px;
         }
     </style>
 </head>
@@ -168,77 +124,17 @@
 
 
     <!-- Gallery Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Our Gallery</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-1.jpg" alt="Gallery Image 1">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-1.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-2.jpg" alt="Gallery Image 2">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-2.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-3.jpg" alt="Gallery Image 3">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-3.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-4.jpg" alt="Gallery Image 4">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-4.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-5.jpg" alt="Gallery Image 5">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-5.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-6.jpg" alt="Gallery Image 6">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-6.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-7.jpg" alt="Gallery Image 6">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-7.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="gallery-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/gallery/img-8.jpg" alt="Gallery Image 6">
-                        <div class="gallery-overlay">
-                            <a href="img/gallery/img-8.jpg" data-lightbox="gallery" class="btn btn-primary">View</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container-xxl px-2 mt-5 gallery-section">
+        <!-- <div class="heading py-4 border-bottom border-light">
+            <h1 class="text-white text-center">Gallery</h1>
+            <h5 class="text-light py-2 text-center">Projects Pictures</h5>
+        </div> -->
+        <div class="section-title text-center">
+            <h1 class="display-5 mb-5">Gallery</h1>
+        </div>
+
+        <div class="row py-2" id="gallery">
+            <!-- JavaScript will inject the columns here -->
         </div>
     </div>
     <!-- Gallery End -->
@@ -251,7 +147,6 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -263,6 +158,49 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+    <script>
+        const basePath = 'img/gallery/';
+        const baseName = 'img-';
+        const fileExtension = '.jpg';
+        let imageCount = 94; // Number of images in the gallery directory
+
+        // Ensure imageCount is divisible by 24
+        imageCount = Math.floor(imageCount / 24) * 24;
+
+        const images = [];
+
+        // Generate image paths based on the pattern
+        for (let i = 1; i <= imageCount; i++) {
+            images.push(`${basePath}${baseName}${i}${fileExtension}`);
+        }
+
+        // Additional images from another directory
+        const additionalImages = [
+            'img/services/service-vaneshear.jpg', 'img/services/service-terrain.jpg', 'img/services/service-seismic.jpg',
+            'img/services/service-pit.jpg', 'img/services/service-piezometer.jpg', 'img/services/service-mackintosh.jpg',
+            'img/services/service-inclonometer.jpg', 'img/services/service-g-sampling.jpg', 'img/services/service-geo-mapping.jpg',
+            'img/services/service-ert.jpg', 'img/services/service-drill.jpg', 'img/services/service-auger.jpg',
+        ];
+
+        images.push(...additionalImages);
+
+        const gallery = document.getElementById('gallery');
+
+        // Create columns based on image array
+        const columns = [[], [], [], []];
+        images.forEach((src, index) => {
+            columns[index % 4].push(`<img src="${src}" alt="" srcset="">`);
+        });
+
+        // Insert columns into gallery
+        columns.forEach(column => {
+            const div = document.createElement('div');
+            div.className = 'column';
+            div.innerHTML = column.join('');
+            gallery.appendChild(div);
+        });
+
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
