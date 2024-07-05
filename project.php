@@ -114,12 +114,14 @@
         }
 
         .custom-card {
-            background-color: #ab7442; /* Change background color */
+            background-color: var(--primary); /* Change background color */
+            border-radius: 50px; /* High value for a cylindrical shape */
         }
 
         .custom-card:hover {
             background-color: #ea282a; /* Change to white on hover */
             color: #ab7442; /* Change text color to match original background */
+            border-radius: 50px; /* Maintain cylindrical shape on hover */
         }
 
         .pagination-info {

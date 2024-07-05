@@ -48,12 +48,19 @@
         .mission-card,
         .vision-card {
             transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: var(--primary); /* initial text color for card-title */
+            color: var(--light)
         }
 
         .mission-card:hover,
         .vision-card:hover {
-            background-color: #ab7442; /* Inverted background color */
-            color: #ffffff; /* Inverted text color */
+            background-color: var(--secondary); /* Inverted background color */
+            color: var(--light)
+        }
+
+        .mission-card .card-title ,
+        .vision-card .card-title {
+            color: var(--light) !important; /* Inverted text color for card-title */
         }
 
         .mission-card:hover .card-title ,
@@ -186,16 +193,16 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                    <div class="card shadow-lg border-0 rounded-lg p-5 mission-card">
-                        <h2 class="card-title text-primary mb-4">Our Vision</h2>
+                    <div class="card shadow-lg border-0 rounded-lg p-5 vision-card">
+                        <h2 class="card-title text-dark mb-4">Our Vision</h2>
                         <p class="card-text">
                             To be the leading company in providing Geo-Services inMalaysia
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
-                    <div class="card shadow-lg border-0 rounded-lg p-5 vision-card">
-                        <h2 class="card-title text-primary mb-4">Our Mission</h2>
+                    <div class="card shadow-lg border-0 rounded-lg p-5 mission-card">
+                        <h2 class="card-title text-dark mb-4">Our Mission</h2>
                         <p class="card-text">
                             To be the expert and reliable company for industrial needs specialising in Geotechnical, Geophysical and Geological
                         </p>
