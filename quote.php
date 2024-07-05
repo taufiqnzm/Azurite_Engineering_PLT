@@ -75,7 +75,7 @@
                         <a href="team.php" class="dropdown-item">Our Team</a>
                         <a href="gallery.php" class="dropdown-item">Gallery</a>
                         <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <!-- <a href="404.php" class="dropdown-item">404 Page</a> -->
+                        <a href="cert.php" class="dropdown-item">Certificates</a>
                     </div>
                 </div>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>

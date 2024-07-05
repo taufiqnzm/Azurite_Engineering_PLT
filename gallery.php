@@ -52,9 +52,26 @@
             gap: 1.2rem;
         }
 
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .column a {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 20px; /* Rounded corners */
+        }
         .column img {
-            width: 100%; /* Ensure images fill their container */
-            border-radius: 20px; /* Adjust the border radius as needed */
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            
+        }
+        .column a:hover img {
+            opacity: 0.8;
+            transform: scale(1.05);
         }
 
         .container-xxl {
@@ -101,7 +118,7 @@
                         <a href="team.php" class="dropdown-item">Our Team</a>
                         <a href="gallery.php" class="dropdown-item active">Gallery</a>
                         <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                        <!-- <a href="404.php" class="dropdown-item">404 Page</a> -->
+                        <a href="cert.php" class="dropdown-item">Certificates</a>
                     </div>
                 </div>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
@@ -182,10 +199,11 @@
 
         // Additional images from another directory
         const additionalImages = [
-            'img/services/service-vaneshear.jpg', 'img/services/service-terrain.jpg', 'img/services/service-seismic.jpg',
+            'img/services/service-soil.jpg', 'img/services/service-terrain.jpg', 'img/services/service-rockfall.jpg',
             'img/services/service-pit.jpg', 'img/services/service-piezometer.jpg', 'img/services/service-mackintosh.jpg',
             'img/services/service-inclonometer.jpg', 'img/services/service-g-sampling.jpg', 'img/services/service-geo-mapping.jpg',
-            'img/services/service-ert.jpg', 'img/services/service-drill.jpg', 'img/services/service-auger.jpg',
+            'img/services/service-seismic.png', 'img/services/service-drill.jpg', 'img/services/service-auger.jpg',
+            'img/services/service-piezocone.jpg',
         ];
 
         images.push(...additionalImages);
@@ -195,7 +213,11 @@
         // Create columns based on image array
         const columns = [[], [], [], []];
         images.forEach((src, index) => {
-            columns[index % 4].push(`<img src="${src}" alt="" srcset="">`);
+            columns[index % 4].push(`
+                <a href="${src}" data-lightbox="gallery-images" data-title="Image ${index + 1}">
+                    <img src="${src}" alt="Image ${index + 1}" class="img-fluid rounded">
+                </a>
+            `);
         });
 
         // Insert columns into gallery
@@ -204,6 +226,12 @@
             div.className = 'column';
             div.innerHTML = column.join('');
             gallery.appendChild(div);
+        });
+
+        // Initialize Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
         });
 
     </script>
