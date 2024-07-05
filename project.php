@@ -12,24 +12,48 @@
         $page = $_GET['page'];
     }
 
+    // Retrieve selected year from the dropdown
+    if (isset($_GET['year'])) {
+        $selectedYear = $_GET['year'];
+    } else {
+        $selectedYear = 'all'; // Default value to show all projects
+    }
+
     // Calculate the starting point for the results
     $startResult = ($page - 1) * $resultsPerPage;
 
-    // Retrieve $totalProjects from session with error handling
-    if (isset($_SESSION['project_count'])) {
-        $totalProjects = ($_SESSION['project_count']);        
+    // Retrieve total project count based on the selected year
+    if ($selectedYear === 'all') {
+        $countSql = "SELECT COUNT(*) FROM tblProject";
+        $stmtCount = $conn->prepare($countSql);
     } else {
-        // Default value if 'project_count' is not available
-        $totalProjects = 54;
+        $countSql = "SELECT COUNT(*) FROM tblProject WHERE projectYear = ?";
+        $stmtCount = $conn->prepare($countSql);
+        $stmtCount->bind_param("i", $selectedYear);
     }
+    
+    $stmtCount->execute();
+    $stmtCount->bind_result($totalProjects);
+    $stmtCount->fetch();
+    $stmtCount->close();
+
     $totalPages = ceil($totalProjects / $resultsPerPage);
 
-    $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
-    $stmt = $conn->prepare($projectCardSql);
-    $stmt->bind_param("ii", $startResult, $resultsPerPage);
+    // Retrieve projects based on the selected year and pagination
+    if ($selectedYear === 'all') {
+        $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
+        $stmt = $conn->prepare($projectCardSql);
+        $stmt->bind_param("ii", $startResult, $resultsPerPage);
+    } else {
+        $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject WHERE projectYear = ? ORDER BY projectYear DESC LIMIT ?, ?";
+        $stmt = $conn->prepare($projectCardSql);
+        $stmt->bind_param("iii", $selectedYear, $startResult, $resultsPerPage);
+    }
+    
     $stmt->execute();
     $result = $stmt->get_result();
 ?>
+
 
 
 <!DOCTYPE html>
@@ -197,103 +221,126 @@
     </div>
     <!-- Page Header End -->
 
-
     <!-- Projects Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Our Projects</h1>
-            </div>
-            <div class="row">
-                <?php
-                if ($result->num_rows > 0) {
-                    $startProjectDisplayed = ($page - 1) * $resultsPerPage + 1;
-                    $endProjectDisplayed = min($startProjectDisplayed + $resultsPerPage - 1, $totalProjects);
-                    $cardIndex = 1;
-                    // Output data for each row
-                    while($row = $result->fetch_assoc()) {
-                        $cardAnimationClass = ($cardIndex % 2 == 0) ? 'fadeInRight' : 'fadeInLeft'; // Alternate animation class
-                        echo '
-                        <div class="col-12 mb-4">
-                            <div class="card border-0 shadow custom-card ' . $cardAnimationClass . '">  
-                                <div class="card-body text-center">
-                                    <p class="card-title">' . htmlspecialchars($row["projectName"]) . '</p>
-                                    <p class="card-text">Year: ' . htmlspecialchars($row["projectYear"]) . '</p>
-                                </div>
-                            </div>
-                        </div>';
-                        $cardIndex++;
-                    }
-                } else {
-                    echo "No projects found.";
-                }
-                ?>
-            </div>
-            <!-- Pagination links -->
-            <div class="row">
-                <div class="col-12">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <!-- First Button -->
-                            <?php if ($page > 1): ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="?page=1" aria-label="First">
-                                        <span aria-hidden="true">&laquo;&laquo;</span>
-                                        <span class="visually-hidden">First</span>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                            
-                            <!-- Previous Button -->
-                            <?php if ($page > 1): ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="?page=<?php echo ($page - 1); ?>" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <h1 class="display-5 mb-5">Our Projects</h1>
+        </div>
 
-                            <!-- Page Number Link -->
-                            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                                <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>">
-                                    <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
-                                </li>
-                            <?php endfor; ?>
-
-                            <!-- Next Button -->
-                            <?php if ($page < $totalPages): ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="?page=<?php echo ($page + 1); ?>" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                        <span class="visually-hidden">Next</span>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-
-                            <!-- Last Button -->
-                            <?php if ($page < $totalPages): ?>
-                                <li class="page-item">
-                                    <a class="page-link" href="?page=<?php echo $totalPages; ?>" aria-label="Last">
-                                        <span aria-hidden="true">&raquo;&raquo;</span>
-                                        <span class="visually-hidden">Last</span>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
-            <!-- Pagination Info -->
-            <div class="row">
-                <div class="col-12">
-                    <p class="pagination-info mb-3">Showing <?php echo $startProjectDisplayed; ?> - <?php echo $endProjectDisplayed; ?> of <?php echo $totalProjects; ?></p>
+        <!-- Year Filter Start -->
+        <div class="row mb-4">
+            <div class="col-12 text-end">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="yearDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filter by Year
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="yearDropdown">
+                        <li><a class="dropdown-item" href="?page=<?php echo $page; ?>">All Years</a></li>
+                        <?php
+                        $years = $conn->query("SELECT DISTINCT projectYear FROM tblProject ORDER BY projectYear DESC");
+                        while ($year = $years->fetch_assoc()) {
+                            $activeClass = (isset($_GET['year']) && $_GET['year'] == $year['projectYear']) ? 'active' : '';
+                            echo '<li><a class="dropdown-item ' . $activeClass . '" href="?page=' . $page . '&year=' . $year['projectYear'] . '">' . $year['projectYear'] . '</a></li>';
+                        }
+                        ?>
+                    </ul>
                 </div>
             </div>
         </div>
+        <!-- Year Filter End -->
+
+
+        <div class="row">
+            <?php
+            if ($result->num_rows > 0) {
+                $startProjectDisplayed = ($page - 1) * $resultsPerPage + 1;
+                $endProjectDisplayed = min($startProjectDisplayed + $resultsPerPage - 1, $totalProjects);
+                $cardIndex = 1;
+                // Output data for each row
+                while($row = $result->fetch_assoc()) {
+                    $cardAnimationClass = ($cardIndex % 2 == 0) ? 'fadeInRight' : 'fadeInLeft'; // Alternate animation class
+                    echo '
+                    <div class="col-12 mb-4">
+                        <div class="card border-0 shadow custom-card ' . $cardAnimationClass . '">  
+                            <div class="card-body text-center">
+                                <p class="card-title">' . htmlspecialchars($row["projectName"]) . '</p>
+                            </div>
+                        </div>
+                    </div>';
+                    $cardIndex++;
+                }
+            } else {
+                echo "No projects found.";
+            }
+            ?>
+        </div>
+        <!-- Pagination links -->
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <!-- First Button -->
+                        <?php if ($page > 1): ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=1" aria-label="First">
+                                    <span aria-hidden="true">&laquo;&laquo;</span>
+                                    <span class="visually-hidden">First</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                        
+                        <!-- Previous Button -->
+                        <?php if ($page > 1): ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo ($page - 1); ?>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="visually-hidden">Previous</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
+                        <!-- Page Number Link -->
+                        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                            <li class="page-item <?php echo ($page == $i) ? 'active' : ''; ?>">
+                                <a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+                            </li>
+                        <?php endfor; ?>
+
+                        <!-- Next Button -->
+                        <?php if ($page < $totalPages): ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo ($page + 1); ?>" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="visually-hidden">Next</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
+                        <!-- Last Button -->
+                        <?php if ($page < $totalPages): ?>
+                            <li class="page-item">
+                                <a class="page-link" href="?page=<?php echo $totalPages; ?>" aria-label="Last">
+                                    <span aria-hidden="true">&raquo;&raquo;</span>
+                                    <span class="visually-hidden">Last</span>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Pagination Info -->
+        <div class="row">
+            <div class="col-12">
+                <p class="pagination-info mb-3">Showing <?php echo $startProjectDisplayed; ?> - <?php echo $endProjectDisplayed; ?> of <?php echo $totalProjects; ?></p>
+            </div>
+        </div>
     </div>
-    <!-- Projects End -->
+</div>
+<!-- Projects End -->
+
 
         
 

@@ -51,6 +51,12 @@
             flex-direction: column;
             gap: 1.2rem;
         }
+
+        .column img {
+            width: 100%; /* Ensure images fill their container */
+            border-radius: 20px; /* Adjust the border radius as needed */
+        }
+
         .container-xxl {
             padding-left: 50px;
             padding-right: 50px;
