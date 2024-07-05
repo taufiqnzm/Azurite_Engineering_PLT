@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
@@ -92,7 +92,7 @@
             align-items: center;
             text-decoration: none;
             color: #fff;
-            background-color: #007bff;
+            background-color: var(--primary);
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
@@ -100,7 +100,7 @@
         }
 
         .btn-download:hover {
-            background-color: #0056b3;
+            background-color: var(--secondary);
         }
 
         .btn-download i {
@@ -186,11 +186,11 @@
                 <div class="card h-100">
                     <img src="img/license/registration.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/registration.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                    <a href="img/license/registration.pdf" class="btn btn-primary btn-download" download><i class="fa-solid fa-cloud-arrow-down"></i></a>
                     </div>
                     <div class="card-label">
                         <h5 class="card-title">Company Registration</h5>
-                        <p class="card-text">Registration No.: 201904002936 (LLP0021748-LGN)</p>
+                        <p class="card-text">Registration No: 201904002936 (LLP0021748-LGN)</p>
                     </div>
                 </div>                
             </div>     
@@ -198,7 +198,7 @@
                 <div class="card h-100">
                     <img src="img/license/cidb.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/cidb.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>                        
+                        <a href="img/license/cidb.pdf" class="btn btn-primary btn-download" download><i class="fa-solid fa-cloud-arrow-down"></i></a>                        
                     </div>
                     <div class="card-label">
                         <h5 class="card-title">Construction Industry Development (CIDB)</h5>
@@ -210,12 +210,12 @@
                 <div class="card h-100">
                     <img src="img/license/cidb-2.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/cidb-2.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>                        
+                        <a href="img/license/cidb-2.pdf" class="btn btn-primary btn-download" download><i class="fa-solid fa-cloud-arrow-down"></i></a>                      
                     </div>
                     <div class="card-label">
                         <h5 class="card-title">Construction Industry Development (CIDB)</h5>
                         <p class="card-text">Grade G1 Gategory:
-                        B04, B05, CE01, CE10, CE12, CE21, CE36, M15.</p>
+                        B04, B05, CE01, CE10, CE12, CE21, CE36, M15</p>
                     </div>
                 </div>
             </div> 
@@ -223,11 +223,11 @@
                 <div class="card h-100">
                     <img src="img/license/jccd.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/jccd.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>                        
+                        <a href="img/license/jccd.pdf" class="btn btn-primary btn-download" download><i class="fa-solid fa-cloud-arrow-down"></i></a>                       
                     </div>
                     <div class="card-label">
                         <h5 class="card-title">Johor Centre for Construction Development (JCCD)</h5>
-                        <p class="card-text">Registration No.: JCCD/SKJ/20/01/00807</p>
+                        <p class="card-text">Registration No: JCCD/SKJ/20/01/00807</p>
                     </div>
                 </div>
             </div> 
@@ -235,7 +235,7 @@
                 <div class="card h-100">
                     <img src="img/license/kkm.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/kkm.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                        <a href="img/license/kkm.pdf" class="btn btn-primary btn-download" download><i class="fa-solid fa-cloud-arrow-down"></i></a>
                         
                     </div>
                     <div class="card-label">
@@ -249,7 +249,7 @@
                 <div class="card h-100">
                     <img src="img/license/service.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/service.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                        <a href="img/license/service.pdf" class="btn btn-primary btn-download" download><i class="fa-solid fa-cloud-arrow-down"></i></a>
                         
                     </div>
                     <div class="card-label">

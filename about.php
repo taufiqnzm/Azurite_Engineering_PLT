@@ -196,7 +196,7 @@
                     <div class="card shadow-lg border-0 rounded-lg p-5 vision-card">
                         <h2 class="card-title text-dark mb-4">Our Vision</h2>
                         <p class="card-text">
-                            To be the leading company in providing Geo-Services inMalaysia
+                            To be the leading company in providing Geo-Services in Malaysia
                         </p>
                     </div>
                 </div>
