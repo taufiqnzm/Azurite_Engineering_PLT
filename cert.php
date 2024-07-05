@@ -187,18 +187,22 @@
                     <img src="img/license/registration.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
                         <a href="img/license/registration.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                    </div>
+                    <div class="card-label">
                         <h5 class="card-title">Company Registration</h5>
                         <p class="card-text">Registration No.: 201904002936 (LLP0021748-LGN)</p>
                     </div>
-                </div>
+                </div>                
             </div>     
             <div class="col">
                 <div class="card h-100">
                     <img src="img/license/cidb.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/cidb.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                        <a href="img/license/cidb.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>                        
+                    </div>
+                    <div class="card-label">
                         <h5 class="card-title">Construction Industry Development (CIDB)</h5>
-                        <p class="card-text">Registration No.: 0120200116-JH040538</p>
+                        <p class="card-text">Registration No: 0120200116-JH040538</p>
                     </div>
                 </div>
             </div> 
@@ -206,7 +210,9 @@
                 <div class="card h-100">
                     <img src="img/license/cidb-2.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/cidb-2.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                        <a href="img/license/cidb-2.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>                        
+                    </div>
+                    <div class="card-label">
                         <h5 class="card-title">Construction Industry Development (CIDB)</h5>
                         <p class="card-text">Grade G1 Gategory:
                         B04, B05, CE01, CE10, CE12, CE21, CE36, M15.</p>
@@ -217,7 +223,9 @@
                 <div class="card h-100">
                     <img src="img/license/jccd.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
-                        <a href="img/license/jccd.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                        <a href="img/license/jccd.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>                        
+                    </div>
+                    <div class="card-label">
                         <h5 class="card-title">Johor Centre for Construction Development (JCCD)</h5>
                         <p class="card-text">Registration No.: JCCD/SKJ/20/01/00807</p>
                     </div>
@@ -228,6 +236,9 @@
                     <img src="img/license/kkm.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
                         <a href="img/license/kkm.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                        
+                    </div>
+                    <div class="card-label">
                         <h5 class="card-title">Construction Industry Development (CIDB)</h5>
                         <p class="card-text">No. Sijil: K10103794203191171<br>
                             No. Rujukan Pendaftaran: 357-0002345534</p>
@@ -239,6 +250,9 @@
                     <img src="img/license/service.jpg" class="card-img-top" alt="License Preview">
                     <div class="card-body">
                         <a href="img/license/service.pdf" class="btn btn-primary btn-download" download><i class="bi bi-download"></i></a>
+                        
+                    </div>
+                    <div class="card-label">
                         <h5 class="card-title">Construction Industry Development (CIDB)</h5>
                         <p class="card-text">Gred Pendaftaran: G1 / Kelas F <br>
                         Kategori: B, CE, ME</p>

@@ -125,7 +125,7 @@
                             <img class="img-fluid w-100" src="img/services/service-soil.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-soil.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -140,7 +140,7 @@
                             <img class="img-fluid w-100" src="img/gallery/img-62.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/gallery/img-62.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -155,7 +155,7 @@
                             <img class="img-fluid w-100" src="img/services/service-geo-mapping.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-geo-mapping.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -170,7 +170,7 @@
                             <img class="img-fluid w-100" src="img/gallery/img-58.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/gallery/img-58.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -185,7 +185,7 @@
                             <img class="img-fluid w-100" src="img/services/service-terrain.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-terrain.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -200,7 +200,7 @@
                             <img class="img-fluid w-100" src="img/services/service-mackintosh.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-mackintosh.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -215,7 +215,7 @@
                             <img class="img-fluid w-100" src="img/gallery/img-72.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/gallery/img-72.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -230,7 +230,7 @@
                             <img class="img-fluid w-100" src="img/services/service-rockfall.jpg" alt="Rock Slope & Rock Fallmapping">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-rockfall.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -245,7 +245,7 @@
                             <img class="img-fluid w-100" src="img/services/service-auger.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-auger.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -260,7 +260,7 @@
                             <img class="img-fluid w-100" src="img/gallery/img-80.jpg" alt="Transient Electromagnetic">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/gallery/img-80.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -275,7 +275,7 @@
                             <img class="img-fluid w-100" src="img/services/service-drill.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-drill.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -290,7 +290,7 @@
                             <img class="img-fluid w-100" src="img/gallery/img-44.jpg" alt="Field Density Test">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/gallery/img-44.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -305,7 +305,7 @@
                             <img class="img-fluid w-100" src="img/services/service-g-sampling.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-g-sampling.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -320,7 +320,7 @@
                             <img class="img-fluid w-100" src="img/services/service-piezocone.jpg" alt="Piezocone">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-piezocone.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -335,7 +335,7 @@
                             <img class="img-fluid w-100" src="img/gallery/img-28.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/gallery/img-28.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -350,7 +350,7 @@
                             <img class="img-fluid w-100" src="img/services/service-pit.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-pit.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -365,7 +365,7 @@
                             <img class="img-fluid w-100" src="img/services/service-piezometer.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-piezometer.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -380,7 +380,7 @@
                             <img class="img-fluid w-100" src="img/gallery/img-54.jpg" alt="IN-SITU CBR Test">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/gallery/img-54.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
@@ -395,7 +395,7 @@
                             <img class="img-fluid w-100" src="img/services/service-inclonometer.jpg" alt="">
                             <div class="portfolio-overlay">
                                 <a class="btn btn-square btn-outline-light mx-1" href="img/services/service-inclonometer.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
+                                <!-- <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a> -->
                             </div>
                         </div>
                         <div class="border border-5 border-light border-top-0 p-4">
