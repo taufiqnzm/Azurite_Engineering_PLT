@@ -26,6 +26,9 @@
     z-index: 99;
 }
 
+a:hover {
+    color: var(--secondary);
+}
 
 /*** Spinner ***/
 #spinner {
@@ -51,6 +54,18 @@
 .btn.btn-primary,
 .btn.btn-secondary {
     color: #FFFFFF;
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--secondary); 
+    border-color: var(--secondary); 
+    color: #fff; /* Text color on hover */
+}
+
+.btn.btn-secondary:hover {
+    background-color: var(--primary); 
+    border-color: var(--primary); 
+    color: #fff; /* Text color on hover */
 }
 
 .btn-square {

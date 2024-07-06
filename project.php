@@ -1,57 +1,73 @@
 <?php
-    require_once("includes/config.php");
-    session_start();
+require_once("includes/config.php");
+session_start();
 
-    // Pagination variables
-    $resultsPerPage = 10;
+// Pagination variables
+$resultsPerPage = 10;
 
-    // Determine current page
-    if (!isset($_GET['page'])) {
-        $page = 1;
-    } else {
-        $page = $_GET['page'];
-    }
+// Determine current page
+if (!isset($_GET['page'])) {
+    $page = 1;
+} else {
+    $page = $_GET['page'];
+}
 
-    // Retrieve selected year from the dropdown
-    if (isset($_GET['year'])) {
-        $selectedYear = $_GET['year'];
-    } else {
-        $selectedYear = 'all'; // Default value to show all projects
-    }
+// Retrieve selected year from the dropdown
+if (isset($_GET['year'])) {
+    $selectedYear = $_GET['year'];
+} else {
+    $selectedYear = 'all'; // Default value to show all projects
+}
 
-    // Calculate the starting point for the results
-    $startResult = ($page - 1) * $resultsPerPage;
+// Calculate the starting point for the results
+$startResult = ($page - 1) * $resultsPerPage;
 
-    // Retrieve total project count based on the selected year
-    if ($selectedYear === 'all') {
-        $countSql = "SELECT COUNT(*) FROM tblProject";
-        $stmtCount = $conn->prepare($countSql);
-    } else {
-        $countSql = "SELECT COUNT(*) FROM tblProject WHERE projectYear = ?";
-        $stmtCount = $conn->prepare($countSql);
-        $stmtCount->bind_param("i", $selectedYear);
-    }
-    
-    $stmtCount->execute();
-    $stmtCount->bind_result($totalProjects);
-    $stmtCount->fetch();
-    $stmtCount->close();
+// Retrieve total project count based on the selected year
+if ($selectedYear === 'all') {
+    $countSql = "SELECT COUNT(*) FROM tblProject";
+    $stmtCount = $conn->prepare($countSql);
+} else {
+    $countSql = "SELECT COUNT(*) FROM tblProject WHERE projectYear = ?";
+    $stmtCount = $conn->prepare($countSql);
+    $stmtCount->bind_param("i", $selectedYear);
+}
 
-    $totalPages = ceil($totalProjects / $resultsPerPage);
+$stmtCount->execute();
+$stmtCount->bind_result($totalProjects);
+$stmtCount->fetch();
+$stmtCount->close();
 
-    // Retrieve projects based on the selected year and pagination
-    if ($selectedYear === 'all') {
-        $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
-        $stmt = $conn->prepare($projectCardSql);
-        $stmt->bind_param("ii", $startResult, $resultsPerPage);
-    } else {
-        $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject WHERE projectYear = ? ORDER BY projectYear DESC LIMIT ?, ?";
-        $stmt = $conn->prepare($projectCardSql);
-        $stmt->bind_param("iii", $selectedYear, $startResult, $resultsPerPage);
-    }
-    
-    $stmt->execute();
-    $result = $stmt->get_result();
+$totalPages = ceil($totalProjects / $resultsPerPage);
+
+// Validate current page against total pages
+if ($page > $totalPages) {
+    // Redirect to the last page if current page exceeds total pages
+    header("Location: project.php?page=$totalPages&year=$selectedYear");
+    exit;
+}
+
+// Retrieve projects based on the selected year and pagination
+if ($selectedYear === 'all') {
+    $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject ORDER BY projectYear DESC LIMIT ?, ?";
+    $stmt = $conn->prepare($projectCardSql);
+    $stmt->bind_param("ii", $startResult, $resultsPerPage);
+} else {
+    $projectCardSql = "SELECT projectId, projectName, projectYear FROM tblProject WHERE projectYear = ? ORDER BY projectYear DESC LIMIT ?, ?";
+    $stmt = $conn->prepare($projectCardSql);
+    $stmt->bind_param("iii", $selectedYear, $startResult, $resultsPerPage);
+}
+
+$stmt->execute();
+$result = $stmt->get_result();
+
+// Adjust displayed project range
+if ($result->num_rows > 0) {
+    $startProjectDisplayed = ($page - 1) * $resultsPerPage + 1;
+    $endProjectDisplayed = min($startProjectDisplayed + $resultsPerPage - 1, $totalProjects);
+} else {
+    $startProjectDisplayed = 0;
+    $endProjectDisplayed = 0;
+}
 ?>
 
 

@@ -6,7 +6,11 @@
                 <div class="mb-3">
                     <img src="img/qr.jpg" alt="QR Code" style="max-width: 150px; height: auto;">
                 </div>
-                <p>Scan this QR code to visit our page.</p>
+                <p>Scan to visit our page.</p>
+                <!-- <div class="d-flex pt-2">
+                    <p class="mb-2" id="visitor-counter"><i class="fa fa-spinner fa-spin  me-3"></i>Loading...</p>
+                </div>
+                <p><i class="fa fa-calendar-alt me-3"></i>Last Updated: July 6, 2024</p>                 -->
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Address</h4>
@@ -18,7 +22,7 @@
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div> -->
+                </div> -->                
             </div>
             <div class="col-lg-2 col-md-6">
                 <h4 class="text-light mb-4">Services</h4>
