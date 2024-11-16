@@ -112,7 +112,7 @@
                             <h1 class="display-5 mb-4">Contact Us</h1>
                         </div>
                         <p class="mb-4">Please feel free to contact us using the form below. We will get back to you as soon as possible.</p>
-                        <form action="sendmail.php" method="POST">
+                        <form action="sendmail-contact.php" method="POST">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">

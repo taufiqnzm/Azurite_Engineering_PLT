@@ -56,7 +56,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
         <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <img src="img/azurite-logo.png" alt="AZURITE ENGINEERING PLT Logo" class="img-fluid me-2" style="height: 50px;">
-            <h3 class="m-0 text-primary">AZURITE ENGINEERING PLT</h3>
+            <!-- <h3 class="m-0 text-primary">AZURITE ENGINEERING PLT</h3> -->
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -117,19 +117,19 @@
                             <h1 class="display-5 mb-4">Free Quote</h1>
                         </div>
                         <p class="mb-4 pb-2">Get a free quote for our top-notch services. We are here to understand your needs and provide the best solutions tailored just for you.</p>
-                        <form>
+                        <form action="sendmail-quote.php" method="POST">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" id="name" name="name" required placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control border-0" id="email" name="email" required placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" id="phone" name="phone" required placeholder="Your Mobile" style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
+                                    <select class="form-select border-0" id="service" name="service" style="height: 55px;">
                                         <option selected>Select A Service</option>
                                         <option value="Geotechnical">Geotechnical</option>
                                         <option value="Geophysical">Geophysical</option>
@@ -137,10 +137,10 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Note"></textarea>
+                                    <textarea class="form-control border-0" id="note" name="note" placeholder="Special Note"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                                    <button class="btn btn-primary w-100 py-3" type="submit" name="submit">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -170,9 +170,24 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+
+        var msgTxt = '<?= $_SESSION['status'] ?? ''; ?>'
+        if (msgTxt != '') {
+            Swal.fire({
+                title: "Thank you!",
+                text: msgTxt,
+                icon: "sucess"
+            });
+            <?php unset ($_SESSION['status']); ?>
+        }
+        
+    </script>
 </body>
 
 </html>

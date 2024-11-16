@@ -38,20 +38,121 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-    .frame {
-        border: 2px solid #3b5bdb; /* Example border color */
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Example shadow effect */
-        overflow: hidden; /* Ensures the border and shadow don't overflow */
-    }
+        .frame {
+            border: 2px solid #3b5bdb; /* Example border color */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Example shadow effect */
+            overflow: hidden; /* Ensures the border and shadow don't overflow */
+        }
 
-    .frame img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 8px; /* Rounded corners for the image inside the frame */
-    }
+        .frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px; /* Rounded corners for the image inside the frame */
+        }
+
+        .main-container {
+            text-align: center;
+            /* background: #f5f5f5; */
+        }
+
+        /* .header {
+            padding-top: 30px;
+            color: #444;
+            font-size: 20px;
+            margin: auto;
+            line-height: 50px;
+        } */
+
+        .sub-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sub-container .teams {
+            background-color: #f8f9fa; /* Light background color */
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 10px;
+            max-width: 30%;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        }
+
+
+        .sub-container .teams:hover {
+            background-color: #dee2e6; /* Hover effect */
+            border-color: #ccc;
+            transform: scale(1.05); /* Scale up on hover */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .teams {
+            margin: 10px;
+            padding: 22px;
+            max-width: 30%;
+            cursor: pointer;
+            transition: 0.4s;
+            box-sizing: border-box;
+        }
+
+        .teams:hover {
+            background: #ddd;
+            border-radius: 12px;
+        }
+
+        .teams img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .name {
+            padding: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        .desig {
+            font-style: italic;
+            color: #888;
+        }        
+
+        .about {
+            margin: 20px 0;
+            font-weight: lighter;
+            color: #4e4e4e;
+        }
+
+        .social-links a{
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            transition: .4s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.5);
+        }
+
+        .social-links a i {
+            color: #444;
+        }
+
+        @media screen and (max-width: 600px){
+            .teams {
+                max-width: 100%;
+            }
+        }
 </style>
 
 </head>
@@ -121,17 +222,85 @@
 
 
     <!-- Team Start -->
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <div class="section-title text-center">
-                    <h1 class="display-5 mb-5">Organizational Chart</h1>
+    <div class="main-container">
+        <!-- <div class="header">
+            <h1>Our Team</h1>
+        </div> -->
+        <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Our Team</h1>
+            </div>
+        <div class="sub-container">
+            <div class="teams">
+                <img src="img/team/pokcik.png" alt="">
+                <div class="name">Dr. Muhammad Nur Hidayat Bin Zahari</div>
+                <div class="desig">Managing Director</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
                 </div>
-                <div class="frame">
-                    <img src="img/org-chart.jpg" class="img-fluid" style="max-width: 100%;" alt="Organization Chart">
+            </div>
+
+            <div class="teams">
+                <img src="img/team/alisha.png" alt="">
+                <div class="name">Pn. Alisha Binti Saiful Azhar</div>
+                <div class="desig">Director</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="teams">
+                <img src="img/team/admin.png" alt="">
+                <div class="name">Pn. Siti Nurbalqis Binti Mohd Zainudin</div>
+                <div class="desig">Finance/Admin</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="teams">
+                <img src="img/team/naqib.png" alt="">
+                <div class="name">En. Muhammad Naqib Bin Domadzi</div>
+                <div class="desig">Site Supervisor</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="teams">
+                <img src="img/team/amir.png" alt="">
+                <div class="name">En. Amiruddin Bin Azmi</div>
+                <div class="desig">Driller</div>
+                <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
                 </div>
             </div>
         </div>
+        
     </div>
     <!-- Team End -->
 
@@ -159,6 +328,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script src="https://kit.fontawesome.com/cb89145f02.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
