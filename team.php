@@ -1,6 +1,6 @@
 <?php
-    require_once("includes/config.php");
-    session_start();
+require_once("includes/config.php");
+session_start();
 ?>
 
 
@@ -20,7 +20,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -39,18 +39,22 @@
 
     <style>
         .frame {
-            border: 2px solid #3b5bdb; /* Example border color */
+            border: 2px solid #3b5bdb;
+            /* Example border color */
             padding: 10px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Example shadow effect */
-            overflow: hidden; /* Ensures the border and shadow don't overflow */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            /* Example shadow effect */
+            overflow: hidden;
+            /* Ensures the border and shadow don't overflow */
         }
 
         .frame img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px; /* Rounded corners for the image inside the frame */
+            border-radius: 8px;
+            /* Rounded corners for the image inside the frame */
         }
 
         .main-container {
@@ -76,7 +80,8 @@
         }
 
         .sub-container .teams {
-            background-color: #f8f9fa; /* Light background color */
+            background-color: #f8f9fa;
+            /* Light background color */
             border: 1px solid #ddd;
             border-radius: 12px;
             padding: 22px;
@@ -84,14 +89,17 @@
             max-width: 30%;
             cursor: pointer;
             transition: 0.4s;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow effect */
         }
 
 
         .sub-container .teams:hover {
-            background-color: #dee2e6; /* Hover effect */
+            background-color: #dee2e6;
+            /* Hover effect */
             border-color: #ccc;
-            transform: scale(1.05); /* Scale up on hover */
+            transform: scale(1.05);
+            /* Scale up on hover */
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
@@ -103,6 +111,13 @@
             cursor: pointer;
             transition: 0.4s;
             box-sizing: border-box;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow wrapping to the next row */
+            gap: 16px;
         }
 
         .teams:hover {
@@ -125,7 +140,7 @@
         .desig {
             font-style: italic;
             color: #888;
-        }        
+        }
 
         .about {
             margin: 20px 0;
@@ -133,7 +148,7 @@
             color: #4e4e4e;
         }
 
-        .social-links a{
+        .social-links a {
             display: inline-block;
             height: 30px;
             width: 30px;
@@ -148,12 +163,42 @@
             color: #444;
         }
 
-        @media screen and (max-width: 600px){
+        @media screen and (max-width: 600px) {
             .teams {
+                max-width: 90%;
+                /* Adjust the width of the container */
+                margin: 10px auto;
+                /* Center the cards on smaller screens */
+            }
+
+            .teams img {
                 max-width: 100%;
+                /* Ensure images don't exceed the container's width */
+                height: auto;
+                /* Maintain aspect ratio */
+                object-fit: cover;
+                /* Ensures proper image display */
+                border-radius: 8px;
+                /* Keep consistent styling */
+            }
+
+            .name,
+            .desig,
+            .about {
+                text-align: center;
+                /* Center-align text for better layout on mobile */
+            }
+
+            .social-links {
+                justify-content: center;
+                /* Center-align the social links */
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                /* Add spacing between icons */
             }
         }
-</style>
+    </style>
 
 </head>
 
@@ -227,8 +272,8 @@
             <h1>Our Team</h1>
         </div> -->
         <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Our Team</h1>
-            </div>
+            <h1 class="display-5 mb-5">Our Team</h1>
+        </div>
         <div class="sub-container">
             <div class="teams">
                 <img src="img/team/pokcik.png" alt="">
@@ -300,12 +345,12 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!-- Team End -->
 
 
-        
+
 
     <!-- Footer -->
     <?php include 'includes/footer.php' ?>
