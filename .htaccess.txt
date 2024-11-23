@@ -1,0 +1,11 @@
+# Restrict access to sendmail-quote.php
+<Files "sendmail-quote.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Restrict access to sendmail-contact.php
+<Files "sendmail-contact.php">
+    Order Allow,Deny
+    Deny from all
+</Files>

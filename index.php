@@ -1,13 +1,13 @@
 <?php
-    require_once 'includes/config.php';
-    session_start();
+require_once 'includes/config.php';
+session_start();
 
-    // Fetching total count of rows
-    $countSql = "SELECT COUNT(*) AS total FROM tblProject";
-    $countResult = $conn->query($countSql);
-    $countRow = $countResult->fetch_assoc();
-    $totalProjects = $countRow["total"];
-    $_SESSION['project_count'] = $totalProjects;
+// Fetching total count of rows
+$countSql = "SELECT COUNT(*) AS total FROM tblProject";
+$countResult = $conn->query($countSql);
+$countRow = $countResult->fetch_assoc();
+$totalProjects = $countRow["total"];
+$_SESSION['project_count'] = $totalProjects;
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -42,7 +42,29 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    
+
+    <style>
+        .owl-carousel-item {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            /* Maintain the 16:9 aspect ratio */
+        }
+
+        .owl-carousel-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Stretch to fill width */
+            height: 100%;
+            /* Stretch to fill height */
+            object-fit: fill;
+            /* Forces image to fill container (may distort) */
+            object-position: center;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -97,7 +119,7 @@
     <div class="container-fluid p-0 pb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/geotechnical.jpeg" alt="">
+                <img class="img-fluid" src="img/d/geotechnical.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -113,7 +135,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/geophysical.jpg" alt="">
+                <img class="img-fluid" src="img/gallery2/geophysical.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -129,7 +151,7 @@
                 </div>
             </div>
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/geological.jpg" alt="">
+                <img class="img-fluid" src="img/d/geological.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -146,7 +168,7 @@
             </div>
         </div>
     </div>
-    <!-- Carousel End -->    
+    <!-- Carousel End -->
 
 
     <!-- About Start -->
@@ -155,7 +177,7 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/gallery/img-19.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -163,7 +185,7 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">About Us</h1>
                         </div>
-                        <p class="mb-4 pb-2">Azurite Engineering PLT was incorporated with the Malaysian Registrar of Companies on  the 2019 .Our vision is to be the leading company in providing Geo-services in Malaysia.  Our mission is to be the expert and reliable company for industrial needs specialising in  Geotechnical, Geophysical and Geological.</p>
+                        <p class="mb-4 pb-2">Azurite Engineering PLT was incorporated with the Malaysian Registrar of Companies on the 2019 .Our vision is to be the leading company in providing Geo-services in Malaysia. Our mission is to be the expert and reliable company for industrial needs specialising in Geotechnical, Geophysical and Geological.</p>
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
@@ -255,7 +277,7 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">Why Choose Us</h1>
                         </div>
-                        <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                        <p class="mb-4 pb-2">At AZURITE ENGINEERING PLT, we are dedicated to delivering unparalleled geotechnical, geophysical, and geological solutions. With years of industry expertise, we combine cutting-edge technology and innovative methods to ensure the highest standards of service. Our team is committed to understanding the unique needs of each client, providing tailored solutions that prioritize quality, reliability, and safety</p>
                         <div class="row g-4">
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
@@ -271,22 +293,22 @@
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-user-check fa-2x text-primary"></i>
+                                        <i class="fas fa-sharp fa-solid fa-star fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Creative</p>
-                                        <h5 class="mb-0">Designers</h5>
+                                        <p class="mb-2">Top</p>
+                                        <h5 class="mb-0">Rated</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="d-flex align-items-center">
                                     <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                                        <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                                        <i class="fa fa-user-check fa-2x text-primary"></i>
                                     </div>
                                     <div class="ms-4">
-                                        <p class="mb-2">Free</p>
-                                        <h5 class="mb-0">Consultation</h5>
+                                        <p class="mb-2">Creative</p>
+                                        <h5 class="mb-0">Designers</h5>
                                     </div>
                                 </div>
                             </div>
@@ -306,7 +328,7 @@
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/feature2.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
             </div>
@@ -353,7 +375,7 @@
 
 
     <!-- Footer -->
-    <?php include('includes/footer.php');?>
+    <?php include('includes/footer.php'); ?>
 
 
     <!-- Back to Top -->

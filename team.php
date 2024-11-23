@@ -105,13 +105,24 @@ session_start();
 
 
         .teams {
-            margin: 10px;
-            padding: 22px;
-            max-width: 30%;
-            cursor: pointer;
-            transition: 0.4s;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
             box-sizing: border-box;
+            overflow: hidden;
+            /* Prevents content from overflowing */
+            text-overflow: ellipsis;
+            max-width: 100%;
+            /* Prevent container width overflow */
+            padding: 16px;
+            /* Reduce padding for better fitting */
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
+
 
         .team-container {
             display: flex;
@@ -148,6 +159,18 @@ session_start();
             color: #4e4e4e;
         }
 
+        .name,
+        .desig,
+        .about {
+            overflow: hidden;
+            /* Prevent content overflow */
+            text-overflow: ellipsis;
+            white-space: normal;
+            /* Allows text wrapping */
+            word-wrap: break-word;
+            /* Break long words */
+        }
+
         .social-links a {
             display: inline-block;
             height: 30px;
@@ -165,10 +188,8 @@ session_start();
 
         @media screen and (max-width: 600px) {
             .teams {
-                max-width: 90%;
-                /* Adjust the width of the container */
-                margin: 10px auto;
-                /* Center the cards on smaller screens */
+                font-size: 14px;
+                /* Adjust font size for smaller screens */
             }
 
             .teams img {
@@ -180,6 +201,11 @@ session_start();
                 /* Ensures proper image display */
                 border-radius: 8px;
                 /* Keep consistent styling */
+            }
+
+            .teams .about {
+                font-size: 12px;
+                /* Adjust description size */
             }
 
             .name,

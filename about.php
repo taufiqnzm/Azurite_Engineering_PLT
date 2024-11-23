@@ -1,14 +1,14 @@
 <?php
-    require_once("includes/config.php");
-    session_start();
+require_once("includes/config.php");
+session_start();
 
-    // Retrieve $totalProjects from session with error handling
-    if (isset($_SESSION['project_count'])) {
-        $totalProjects = ($_SESSION['project_count']);        
-    } else {
-        // Default value if 'project_count' is not available
-        $totalProjects = 54;
-    }
+// Retrieve $totalProjects from session with error handling
+if (isset($_SESSION['project_count'])) {
+    $totalProjects = ($_SESSION['project_count']);
+} else {
+    // Default value if 'project_count' is not available
+    $totalProjects = 54;
+}
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -48,24 +48,28 @@
         .mission-card,
         .vision-card {
             transition: background-color 0.3s ease, color 0.3s ease;
-            background-color: var(--primary); /* initial text color for card-title */
+            background-color: var(--primary);
+            /* initial text color for card-title */
             color: var(--light)
         }
 
         .mission-card:hover,
         .vision-card:hover {
-            background-color: var(--secondary); /* Inverted background color */
+            background-color: var(--secondary);
+            /* Inverted background color */
             color: var(--light)
         }
 
-        .mission-card .card-title ,
+        .mission-card .card-title,
         .vision-card .card-title {
-            color: var(--light) !important; /* Inverted text color for card-title */
+            color: var(--light) !important;
+            /* Inverted text color for card-title */
         }
 
-        .mission-card:hover .card-title ,
+        .mission-card:hover .card-title,
         .vision-card:hover .card-title {
-            color: #ffffff !important; /* Inverted text color for card-title */
+            color: #ffffff !important;
+            /* Inverted text color for card-title */
         }
     </style>
 </head>
@@ -144,7 +148,7 @@
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/about.jpg" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/gallery/img-19.jpg" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -152,7 +156,7 @@
                         <div class="section-title text-start">
                             <h1 class="display-5 mb-4">About Us</h1>
                         </div>
-                        <p class="mb-4 pb-2">Azurite Engineering PLT was incorporated with the Malaysian Registrar of Companies on  the 2019 .Our vision is to be the leading company in providing Geo-services in Malaysia.  Our mission is to be the expert and reliable company for industrial needs specialising in  Geotechnical, Geophysical and Geological.</p>
+                        <p class="mb-4 pb-2">Azurite Engineering PLT was incorporated with the Malaysian Registrar of Companies on the 2019 .Our vision is to be the leading company in providing Geo-services in Malaysia. Our mission is to be the expert and reliable company for industrial needs specialising in Geotechnical, Geophysical and Geological.</p>
                         <div class="row g-4 mb-4 pb-2">
                             <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="d-flex align-items-center">
@@ -184,7 +188,7 @@
         </div>
     </div>
     <!-- About End -->
-    
+
     <!-- Mission & Vision Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -213,7 +217,7 @@
     </div>
     <!-- Mission & Vision End -->
 
-    
+
     <!-- Footer Start -->
     <?php include 'includes/footer.php'; ?>
 

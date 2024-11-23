@@ -22,7 +22,7 @@
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                </div> -->                
+                </div> -->
             </div>
             <div class="col-lg-2 col-md-6">
                 <h4 class="text-light mb-4">Services</h4>
@@ -35,9 +35,9 @@
                 <a class="btn btn-link" href="about.php">About Us</a>
                 <a class="btn btn-link" href="contact.php">Contact Us</a>
                 <a class="btn btn-link" href="service.php">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
-            </div>                
+                <!-- <a class="btn btn-link" href="">Terms & Condition</a> -->
+                <!-- <a class="btn btn-link" href="contact.php">Support</a> -->
+            </div>
         </div>
     </div>
     <div class="container">
